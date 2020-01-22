@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<link rel="shortcut icon" href="../resources/favicon.ico" th:href="@{/static/favicon.ico}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link type="text/css" rel="stylesheet" href="/css/home.css" />
+		<link type="text/css" rel="stylesheet" href="/css/topBar.css" />
+		<script src="/js/jquery-1.11.0.min.js"></script>
+		<script src="/js/HelpUtils.js"></script>
+		<script type="application/javascript" src="/js/topBar.js"></script>
+		<script type="application/javascript" src="/js/home.js"></script>
+	</head>
+	<body>
+		<!--顶部菜单-->
+		<div th:replace="~{common/topBar::topBar}"></div>
+		<!-- 顶部菜单下背景-->
+		<div class="second_top"></div>
+		<!-- 项目标题:介绍-->
+		<div class="project_title">
+			<p>项目介绍</p>
+			<p>PROJECT INTRODJCTION</p>
+		</div>
+		<!-- 项目介绍内容-->
+		<div class="project_introdjction_content">
+			<div class="introdjction_content">
+				<div>
+					<p>简单易用的能力测评系统</p>
+					<p>在你还在对自己未来充满迷茫的时候，对自己以后从事什么样的职业一片空白的时候，对自己实际的能力一无所知的时候，
+					，选吧可以根据你的基本信息为你匹配适合你的职业，并为你了策划职业的发展方向，岗位要求；选吧还可以为你匹配你能力能够胜任的企业，
+					让你不再像大海捞针一样去寻找属于自己的职业岗位，为你插上获取就职机会的双速马达；选吧也会在你没有能匹配上的企业时，为你分析你自身的客观原因，
+					并为你提供解决方案；选吧会为你提供海量的加油资料，学习素材！抛去烦恼，快来选吧!</p>
+				</div>
+				<div>
+					<img src="/img/introduction.png" />
+				</div>
+			</div>
+		</div>
+		<!-- 项目标题:流程-->
+		<div class="project_title">
+			<p>项目流程</p>
+			<p>PROJECT FLOW</p>
+		</div>
+		<!-- 项目流程内容-->
+		<div class="project_flow_content"></div>
+		<!-- 公司标题:简介-->
+		<div class="project_title">
+			<p>公司简介</p>
+			<p>COMPANY PROFILE</p>
+		</div>
+		<!-- 公司简介内容-->
+		<div class="company_profile_content">
+			<div class="profile_content">
+				<div>
+					<img src="/img/CompanyProfile.png" />
+				</div>
+				<div>
+					<p>格睿泰思</p>
+					<p>四川格睿泰思信息科技有限公司（简称格睿泰思）是致力于软件开发和IT技术人才孵化的信息技术企业，格睿泰思存在的价值是把最好的教育与产品传递给世界。格睿泰思业务涵盖IT教育、企业内训、软件研发、线上教育、复合型人才孵化、人力资源等业务板块。格睿泰思依托自身强大的技术实力目前已与海内外数百家高校、科技企业达成战略合作。
+格睿泰思以“格局、睿智、泰宇、思考”为发展理念；以“把最棒的教育与产品传递给世界”为使命；以“诚信、创新、共赢”为核心价值观，为广大学子提供最便捷高质的服务，致力于成为科技界最佳人才服务商与用户最信赖的企业。
+        </p>
+				</div>
+			</div>
+		</div>
+		<!--底部备案信息-->
+		<div class="all_bottom">
+			<p>©2019 grts 使用选吧前必读 意见反馈 京ICP证030173号 京公网安备11000002000001号 </p>
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="../resources/favicon.ico" th:href="@{/static/favicon.ico}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>index</title>
+        <link type="text/css" rel="stylesheet" href="/css/exercise.css" />
+        <link type="text/css" rel="stylesheet" href="/css/topBar.css" />
+        <script src="/js/jquery-1.11.0.min.js"></script>
+        <script src="/js/HelpUtils.js"></script>
+        <script type="application/javascript" src="/js/topBar.js"></script>
+    </head>
+    <title>成长</title>
+</head>
+<body>
+    <div class="div_all">
+        <div th:replace="~{common/topBar::topBar}"></div>
+    </div>
+</body>
+<script>
+    $(function () {
+        $(".menu_ul_li_a").eq(4).css("color","#4DA7FF");
+        topLogin();
+    })
+</script>
+</html>

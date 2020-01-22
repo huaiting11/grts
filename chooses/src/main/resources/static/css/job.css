@@ -1,0 +1,160 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #222222;
+	letter-spacing: 1px;
+}
+
+/*中部内容div*/
+.all_content{	
+	width: 100%;
+	height: 100%;
+	background-color: #FAFAFA;
+	overflow: hidden;
+}
+/*职业方向菜单div*/
+.content_tab{
+	width: 1200px;
+	height: 72px;
+	background-color: #FFFFFF;
+	line-height: 72px;
+	margin: 0.5em auto;
+}
+.tab{
+	list-style-type: none;
+}
+.tab_direction{
+	float: left;
+	margin-left: 30px;
+	font-size: 18px;
+	color: #4DA7FF;
+}
+.tab_li{
+	margin-left: 50px;
+	float: left;
+	font-size: 14px;
+}
+.system_explain{
+	width: 1200px;
+	height: 685px;
+	background-color: #FFFFFF;
+	margin:0 auto;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.bgimg{
+	width: 1020px;
+	height: 560px;
+	margin-top: 60px;
+	margin-left: 80px;
+	background-image: url(/img/bgimg.png);
+	overflow: hidden;
+}
+.bgimg p:nth-child(1){
+	margin-left: 125px;
+	margin-top: 90px;
+	letter-spacing: 2px;
+}
+.bgimg p:nth-child(2){
+	width: 800px;
+	margin-left: 125px;
+	margin-top: 10px;
+	line-height: 40px;
+	letter-spacing: 2px;
+	text-indent: 2em;
+	
+}
+.bgimg p:nth-child(3){
+	position: relative;
+	left: 850px;
+	top: 130px;
+}
+/*匹配公司*/
+.matching_company{
+	width: 1200px;
+	height: 11em;
+	background-color: #FFFFFF;
+	margin: 12px auto;
+	display: block;
+	overflow: hidden;
+}
+/*职位信息*/
+.post{
+	width: 28em;
+	height: 7em;
+	float: left;
+	margin: 2em 1em;
+}
+.post p{
+	margin: 0.6em 0em;
+}
+.post p:nth-of-type(1) a:nth-of-type(1){
+	font-size: 1.3em;
+	color: #12C886;
+	margin-left: 1em;
+}
+.post p:nth-of-type(1) span:nth-of-type(2){
+	font-size: 1.3em;
+	color: darkgray;
+}
+.post p:nth-of-type(2) span:nth-of-type(1){
+	margin-left: 1em;
+	font-size: 1.2em;
+	color: red;
+}
+.post p:nth-of-type(2) span:nth-of-type(2){
+	font-size: 1.1em;
+	margin-left: 1em;
+}
+.post p:nth-of-type(3) span{
+	font-size: 1.1em;
+	padding: 0.2em;
+	background-color: #FAFAFA;
+	border-radius: 2px;
+	border: 1px solid #FAFAFA;
+	margin-left: 1em;
+}
+/*公司信息*/
+.company{
+	width: 25em;
+	height: 7em;
+	float: left;
+	margin: 2em 0em 2em 18em;
+}
+.company a{
+	margin: 0.6em 0em;
+}
+.company a:nth-of-type(1){
+	font-size: 1.3em;
+	color: #12C886;
+	margin-left: 0.7em;
+}
+.company p:nth-of-type(2){
+	margin-left: 1em;	
+}
+.company p:nth-of-type(2) span{
+	font-size: 1.2em;
+}
+.company p:nth-of-type(3){
+	margin-left: 0.5em;
+}
+.logo{
+	width: 7em;
+	height: 7em;
+	float: left;
+	margin: 2em 0em 2em 4em;
+	border: 0.1em solid gray;
+}
+.logo img{
+	width: 100%;
+	height: 100%;
+}
+
+/*工商备案信息*/
+.all_bottom{
+	background-color: #FAFAFA;
+} 
+

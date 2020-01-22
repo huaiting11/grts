@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header class="navbar-header" th:fragment="topBar">
+    <div class="top">
+        <div class="top_left">
+            <img src="/img/home.png" alt="logo">
+        </div>
+        <div class="top_menu">
+            <ul class="menu_ul">
+                <li class="menu_ul_li">
+                    <a class="menu_ul_li_a" href="JavaScript:void(0)">首页</a>
+                </li>
+                <li class="menu_ul_li">
+                    <a class="menu_ul_li_a" href="JavaScript:void(0)">专业方向匹配</a>
+                </li>
+                <li class="menu_ul_li">
+                    <a class="menu_ul_li_a" href="JavaScript:void(0)">能力测试</a>
+                </li>
+                <li class="menu_ul_li">
+                    <a class="menu_ul_li_a" href="JavaScript:void(0)">职业方向匹配</a>
+                </li>
+                <li class="menu_ul_li">
+                    <a class="menu_ul_li_a" href="JavaScript:void(0)">能力成长</a>
+                </li>
+                <li class="menu_ul_li">
+                    <a class="menu_ul_li_a" href="JavaScript:void(0)">个人信息</a>
+                </li>
+            </ul>
+        </div>
+        <div class="user_div">
+            <div class="notLoggedIn">
+                <a href="/login.html">登录</a>
+                <a href="/register.html">注册</a>
+            </div>
+            <div class="alreadyLoggedIn point">
+                <button>李文龙</button>
+                <img src="/img/down_blue.png"  />
+                <div>
+                    <a href="##">修改密码</a>
+                    <a href="JavaScript:void(0)">退出</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+</html>

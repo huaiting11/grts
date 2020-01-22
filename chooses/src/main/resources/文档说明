@@ -1,0 +1,2 @@
+要运行项目，就在linux的root根目录之下运行以下的命令
+java -jar chooses-0.0.1-SNAPSHOT.jar

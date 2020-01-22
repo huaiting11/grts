@@ -1,0 +1,110 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #222222;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+
+/*顶层div*/
+.top{
+	width: 1200px;
+	height: 96px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+/*顶层div左侧LOGO*/
+.top_left{
+	width: 120px;
+	height: 96px;
+	/*background-color:blue;*/
+	/*background-image: url('../img/home.png');*/
+	float: left;
+}
+.top_left img{
+	height: 96px;
+	width: 120px;
+}
+/*顶层div中部菜单*/
+.top_menu{
+	width: 800px;
+	height: 96px;
+	float: left;
+	margin-left: 70px;
+}
+.menu_ul{
+	float: left;
+}
+.menu_ul_li{
+	list-style-type: none;
+	float: left;
+	margin-left: 56px;
+	line-height: 96px;
+}
+.menu_ul_li_a{
+	text-decoration: none;
+}
+.user_div{
+	width: 208px;
+	height: 96px;
+	float: left;
+}
+.notLoggedIn{
+	display: none;
+}
+.notLoggedIn a{
+	display: block;
+	float: left;
+	margin: 2em 0.1em;
+	text-align: center;
+	width: 96px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #4DA7FF;
+	border-radius: 3px;
+	color: #4DA7FF;
+}
+.alreadyLoggedIn{
+	width: 200px;
+	height: 20px;
+	margin: 2.7em auto ;
+	display: none;
+} 	
+.alreadyLoggedIn button{
+	letter-spacing: 0.2em;
+	background-color: white;
+}
+.alreadyLoggedIn div{
+	width: 70px;
+	height: 60px;
+	text-align: center;
+	overflow: hidden;
+	border-radius: 5px;
+	background-color: #FBFDFE;
+	border: 1px solid lightgray;
+	position: absolute;
+	display: none;
+}
+
+.alreadyLoggedIn div a{
+	display: block;
+	margin: 0.5em auto 0em;
+}
+
+/*底层div*/
+.all_bottom{
+	width: 100%;
+	height: 67px;
+	margin: auto auto ;
+	text-align: center;
+	line-height: 67px;
+}
+.selectBlue{
+	color: #4DA7FF
+}
+.point{
+	cursor:pointer;
+}

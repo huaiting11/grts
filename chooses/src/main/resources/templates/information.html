@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../resources/favicon.ico" th:href="@{/static/favicon.ico}"/>
+    <link type="text/css" rel="stylesheet" href="/css/topBar.css" />
+    <link type="text/css" rel="stylesheet" href="/css/information.css" />
+    <script type="application/javascript" src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/HelpUtils.js" type="application/javascript"></script>
+    <script type="application/javascript" src="/js/topBar.js"></script>
+    <script src="/js/jquery.cityselect.js" type="application/javascript"></script>
+    <script type="application/javascript" src="/js/information.js"></script>
+</head>
+<body>
+<div th:replace="~{common/topBar::topBar}"></div>
+<div class="all_content">
+    <div class="content">
+        <!--内容左侧-->
+        <div class="register">
+            <div class="top_move"></div>
+            <div class="div_select move130">
+                名字：
+                <input type="text" class="select" placeholder=" 请输入您的名字" name="name" />
+            </div>
+            <div class="div_select move130 ">
+                性别：
+                <select class="select" name="sex">
+                    <option class="option" value="true">男</option>
+                    <option class="option" value="false">女</option>
+                </select>
+            </div>
+            <div class="div_select move130">
+                年龄：
+                <input type="text" class="select" placeholder=" 请输入您的年龄" name="age" />
+            </div>
+            <div class="div_select move130" id="city_4">
+                籍贯：
+                <select class="prov select native"></select>
+                <select class="city select native" disabled="disabled"></select>
+                <select class="dist select native" disabled="disabled"></select>
+            </div>
+            <div class="div_select move130">
+                学校：
+                <input type="text" class="select" placeholder=" 请输入您的学校" name="school" />
+            </div>
+            <div class="div_select move130">
+                专业：
+                <input type="text" class="select" placeholder=" 请输入您的专业" name="professional"/>
+            </div>
+            <div class="div_select move130">
+                爱好：
+                <input type="search" placeholder=" 请输入您的爱好" class="select"  name="hobby"/>
+            </div>
+            <div class="evaluation">
+                <p class="evaluation_text">自我评价：</p>
+                <div class="evaluation_div">
+                    <textarea placeholder=" 请输入自我评价信息" class="evaluation_textarea" name="evaluation"></textarea>
+                </div>
+            </div>
+            <input type="submit" class="submit" value="提交" />
+        </div>
+        <!--内容右侧-->
+        <div class="register">
+            <div class="account">
+                <div>李文龙</div>
+                <div>账号：<span>178-0258-0256</span></div>
+            </div>
+            <div class="people">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="all_bottom">
+    <p>©2019 grts 使用选吧前必读 意见反馈 京ICP证030173号 京公网安备11000002000001号 </p>
+</div>
+</body>
+</html>

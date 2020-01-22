@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="/assets/js/video.js"></script>
+		<style>
+			.videoList{
+				margin-top: 12px;
+			}
+			.all_it{
+				width: 100%;
+				height: 100%;
+				background-color: #FFFFFF;
+				
+			}
+			.it{
+				width: 1240px;
+				height: 100%;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			
+			/*视频及说明部分*/
+			.video{
+				width: 285px;
+				height: 270px;
+				background-color: #F5F5F5;
+				margin-left: 20px;
+				margin-top: 22px;
+				float: left;
+			}
+			.video_img{
+				width: 285px;
+				height: 163px;
+			}
+			.video_img video{
+				width: 285px;
+				height: 163px;
+			}
+			.video_explain{
+				width: 285px;
+				height: 70px;
+			}
+			.video_explain p:nth-of-type(1){
+				font-size: 13px;
+				margin-top: 20px;
+				margin-left: 19px;
+				width: 238px;
+				height: 34px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				float: left;
+				letter-spacing: 0.1em;
+			}
+			.video_explain span{
+				margin-top: 2.5em;
+				margin-left: 0.1em;
+				display: block;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="page-body">
+			<div class="row widget">
+				<div class="form col-lg-3 widget-drag searchSchool">
+					<div>
+						<div class="form-group" id="typeList">
+							<select class="form-control">
+								<!-- <option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option> -->
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-body">
+				<form method="post"  enctype="multipart/form-data" id="videoData">
+					<input name="token" type="hidden" value="usYM3V2dWdsKMwWEo3E4_Hf17-SiRuUztrIwJwcB:eaGFKB3Uah8JNN2MOm0p_pwsrGs=:eyJzY29wZSI6ImNob29zZWJhciIsImRlYWRsaW5lIjoxNTcyNzgzODI0fQ==">
+					<input name="accept" type="hidden" />
+					<div class="form-group">
+						<!-- <input name="des" type="text"  /> -->
+						<textarea name="message" rows="2" cols="100" id="des">
+						</textarea>
+						<label for="exampleInputFile">文件</label>
+						<input name="file" type="file" id="exampleInputFile" />
+						
+					</div>
+					<input type="submit" value="上传文件" id="submit" />
+				</form>
+			</div>
+			<section class="col-lg-12 widget-drag" style="background-color: #FFFFFF; margin-top: 34px;">
+				<div class="all_it">
+					<div class="it">
+						<!-- <div class="video">
+							<div class="video_img">
+								<video src="video/44.mp4" controls="controls"></video>
+							</div>
+							<div class="video_explain">
+								<p></p>
+								<p>《》</p>
+							</div>
+						</div>
+						<div class="video">
+							<div class="video_img">
+								<video src="video/44.mp4" controls="controls"></video>
+							</div>
+							<div class="video_explain">
+								<p></p>
+								<p>《》</p>
+							</div>
+						</div>
+						<div class="video">
+							<div class="video_img">
+								<video src="video/44.mp4" controls="controls"></video>
+							</div>
+							<div class="video_explain">
+								<p></p>
+								<p>《》</p>
+							</div>
+						</div> -->
+					</div>
+				</div>
+				<div class="count clearfix">
+					<div class="paging pull-right">
+						<div class="clearfix">
+						</div>
+					</div>
+					<span id="p_info" class="pull-right">共有<i class="total">88</i>条，每页显示：<i class="pageSize">15</i>条</span>
+				</div>
+			</section>
+		</section>
+	</body>
+</html>
