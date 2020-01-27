@@ -15,4 +15,10 @@ public interface ExercisesService {
     List<CareerDirection> findUserByCareerDirections(String userId);
 
     List<LgPosition> getLgPosition(String userId, String carrId);
+
+    List<Exercises> find(String careerId);
+
+    Exercises getExersice(String id);
+
+    Boolean saveExer(Exercises exercises);
 }

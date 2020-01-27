@@ -107,10 +107,22 @@ public class UserServiceImpl implements UserService {
         }
 
     }
-
-
     public Integer judgeProfessionalAndEvaluation(String professional,String evaluation){
         return 1;
+    }
+    @Override
+    public List<String> getSchool() {
+        return userMapper.getSchool();
+    }
+
+    @Override
+    public List<User> getUsers(String schoolName) {
+        return userMapper.getUsers(schoolName);
+    }
+
+    @Override
+    public Boolean isTelephone(String telephone) {
+        return  userMapper.isTelephone(telephone)  >= 1 ? true : false;
     }
 
 

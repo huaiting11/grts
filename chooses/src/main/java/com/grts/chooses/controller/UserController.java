@@ -1,5 +1,7 @@
 package com.grts.chooses.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.grts.chooses.bean.Exercises;
 import com.grts.chooses.bean.User;
 import com.grts.chooses.service.ExercisesService;
@@ -8,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -47,6 +50,23 @@ public class UserController {
     public Boolean register(String telephone ,String password){
         boolean isSuccess = userService.register(telephone,password);
         return isSuccess;
+    }
+    @RequestMapping("/user/isTelephone")
+    @ResponseBody
+    public Boolean isTelephone(String telephone){
+        return userService.isTelephone(telephone);
+    }
+    @RequestMapping("/user/getSchool")
+    @ResponseBody
+    public List<String> getSchool(){
+        return  userService.getSchool();
+    }
+    @RequestMapping("/users/getUser")
+    @ResponseBody
+    public PageInfo<User> lists(@RequestParam(defaultValue = "1") int pageNo, @RequestParam(defaultValue = "1") int pageSize, String schoolName) {
+        PageHelper.startPage(pageNo,pageSize);
+        PageInfo<User> pageInfo = new PageInfo<User>(userService.getUsers(schoolName));
+        return pageInfo;
     }
 
 }

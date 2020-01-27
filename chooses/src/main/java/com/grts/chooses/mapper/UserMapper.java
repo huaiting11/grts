@@ -3,6 +3,8 @@ package com.grts.chooses.mapper;
 import com.grts.chooses.bean.User;
 import org.apache.ibatis.annotations.*;
 
+import java.util.List;
+
 @Mapper
 public interface UserMapper {
     @Select("SELECT * FROM t_user WHERE id = #{userId}")
@@ -23,4 +25,10 @@ public interface UserMapper {
             "VALUE (#{id},#{name},#{telephone},#{sex},#{password},#{professional}," +
             "#{hobby},#{evaluation},#{status},#{prov},#{city},#{dist},#{age},#{school})")
     int saveUser(User user);
+    @Select("SELECT DISTINCT school FROM t_user")
+    List<String> getSchool();
+    @Select("SELECT * FROM t_user WHERE school = #{schoolName}")
+    List<User> getUsers(String schoolName);
+    @Select("SELECT count(1) FROM `t_user` where telephone = #{telephone}")
+    Integer isTelephone(String telephone);
 }
