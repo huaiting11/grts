@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>AlphaAdmin</title>
+	<link rel="shortcut icon" href="/resources/favicon.ico" th:href="@{/static/favicon.ico}"/>
 	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-table.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/iconfont.css">
@@ -200,12 +201,6 @@
 			</div>
 			<section class="sidebar">
 				<ul class="sidebar-menu" data-widget="tree">
-					 <li class="active">
-						<a href="index.html" title="首页">
-							<i class="iconfont icon-dashborad"></i>
-							<small>首页</small>
-						</a>
-					</li>
 					<li class="active">
 						<a href="#user" atype="switch" title="用户列表">
 							<i class="iconfont icon-dashborad"></i>
@@ -213,9 +208,9 @@
 						</a>
 					</li>
 					<li class="active">
-						<a href="#video" atype="switch" title="视频管理">
+						<a href="#career" atype="switch" title="职业类型">
 							<i class="iconfont icon-dashborad"></i>
-							<small>视频管理</small>
+							<small>职业类型</small>
 						</a>
 					</li>
 					<li class="active">
@@ -224,154 +219,13 @@
 							<small>试题管理</small>
 						</a>
 					</li>
-					<li class="treeview">
-						<a href="#" title="用户管理">
-							<i class="iconfont icon-chart"></i>
-							<small>用户管理</small>
-							<span class=" pull-right">
-								<i class="iconfont icon-menu-left-small"></i>
-							</span>
+					<li class="active">
+						<a href="#video" atype="switch" title="视频管理">
+							<i class="iconfont icon-dashborad"></i>
+							<small>视频管理</small>
 						</a>
-						<ul class="treeview-menu">
-							<li>
-								<a href="#user" atype="switch">
-									<i class="iconfont icon-circle-hollow"></i>
-									<small>用户列表</small>
-								</a>
-							</li>
-						</ul>
 					</li>
-					<li class="treeview">
-						<a href="#" title="试题管理">
-							<i class="iconfont icon-form"></i>
-							<small>试题管理</small>
-							<span class=" pull-right">
-								<i class="iconfont icon-menu-left-small"></i>
-							</span>
-						</a>
-						<ul class="treeview-menu">
-							<li>
-								<a href="pages/forms/form.html">
-									<i class="iconfont icon-circle-hollow"></i>
-									<small>试题列表</small>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li class="treeview">
-						<a href="#" title="视频列表">
-							<i class="iconfont icon-components"></i>
-							<small>视频列表</small>
-							<span class=" pull-right">
-								<i class="iconfont icon-menu-left-small"></i>
-							</span>
-						</a>
-						<ul class="treeview-menu">
-							<li>
-								<a href="pages/ui/button.html">
-									<i class="iconfont icon-circle-hollow"></i>
-									<small>视频</small>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li class="treeview">
-						<a href="#">
-							<i class="iconfont icon-table"></i>
-							<small>表格</small>
-							<span class=" pull-right">
-								<i class="iconfont icon-menu-left-small"></i>
-							</span>
-						</a>
-						<ul class="treeview-menu">
-							<li>
-								<a href="pages/table/table.html">
-									<i class="iconfont icon-circle-hollow"></i>
-									<small>简单表格</small>
-								</a>
-							</li>
-							<li>
-								<a href="pages/table/data.html">
-									<i class="iconfont icon-circle-hollow"></i>
-									<small>数据表格</small>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li class="treeview">
-						<a href="#">
-							<i class="iconfont icon-folder"></i>
-							<small>页面</small>
-							<span class=" pull-right">
-								<i class="iconfont icon-menu-left-small"></i>
-							</span>
-						</a>
-						<ul class="treeview-menu">
-							<li>
-								<a href="pages/page/login.html">
-									<i class="iconfont icon-circle-hollow"></i>
-									<small>登录页面</small>
-								</a>
-							</li>
-							<li>
-								<a href="pages/page/register.html">
-									<i class="iconfont icon-circle-hollow"></i>
-									<small>注册页面</small>
-								</a>
-							</li>
-							<li>
-								<a href="pages/page/404.html">
-									<i class="iconfont icon-circle-hollow"></i>
-									<small>404页面</small>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li class="treeview">
-						<a href="#">
-							<i class="iconfont icon-category"></i>
-							<small>多级菜单</small>
-							<span class=" pull-right">
-								<i class="iconfont icon-menu-left-small"></i>
-							</span>
-						</a>
-						<ul class="treeview-menu">
-							<li class="treeview">
-								<a href="#">
-									<i class="iconfont icon-circle-hollow"></i>
-									<small>二级菜单</small>
-									<span class=" pull-right">
-										<i class="iconfont icon-menu-left-small"></i>
-									</span>
-								</a>
-								<ul class="treeview-menu">
-									<li class="treeview">
-										<a href="#">
-											<i class="iconfont icon-circle-hollow"></i>
-											<small>三级菜单</small>
-											<span class=" pull-right">
-												<i class="iconfont icon-menu-left-small"></i>
-											</span>
-										</a>
-										<ul class="treeview-menu">
-											<li>
-												<a href="#">
-													<i class="iconfont icon-circle-hollow"></i>
-													<small>四级菜单</small>
-												</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">
-									<i class="iconfont icon-circle-hollow"></i>
-									<small>二级菜单</small>
-								</a>
-							</li>
-						</ul>
-					</li>
+
 				</ul>
 			</section>
 		</aside>

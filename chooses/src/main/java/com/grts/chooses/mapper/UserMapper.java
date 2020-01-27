@@ -9,7 +9,7 @@ import java.util.List;
 public interface UserMapper {
     @Select("SELECT * FROM t_user WHERE id = #{userId}")
     User findUserById(String userId);
-    @Select("SELECT * FROM t_user WHERE telephone = #{telephone} AND password = #{password};")
+    @Select("SELECT * FROM t_user WHERE telephone = #{telephone} AND password = #{password}")
     User findUserAndPass(@Param("telephone") String telephone, @Param("password") String password);
     @Update("UPDATE t_user SET name = #{name} , sex = #{sex} , " +
             " professional = #{professional} , " +
@@ -29,6 +29,6 @@ public interface UserMapper {
     List<String> getSchool();
     @Select("SELECT * FROM t_user WHERE school = #{schoolName}")
     List<User> getUsers(String schoolName);
-    @Select("SELECT count(1) FROM `t_user` where telephone = #{telephone}")
-    Integer isTelephone(String telephone);
+    @Select("SELECT * FROM `t_user` where telephone = #{telephone}")
+    User isTelephone(String telephone);
 }

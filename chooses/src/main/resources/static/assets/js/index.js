@@ -14,13 +14,13 @@ $(function(){
 					new user();
 				});break;
 			case "#video":loadRight("/back/video.html",function () {
-				/* new progress(); */
+				 new video();
 			});break;
-			case "#wwarning":loadRight("window/warings",function () {
-				new warnings();
+			case "#exercise":loadRight("/back/exercise.html",function () {
+				new exercise();
 			});break;
-			case "#wdeliver":loadRight("window/deliver",function () {
-				new deliver();
+			case "#career":loadRight("/back/career.html",function () {
+				new career();
 			});break;
 			case '#org':loadRight("org/index",function (xhr, a, b, c) {
 				new org();

@@ -4,6 +4,7 @@ package com.grts.chooses.service.impl;
 import com.grts.chooses.bean.*;
 import com.grts.chooses.mapper.*;
 import com.grts.chooses.service.UserService;
+import com.grts.chooses.util.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +23,8 @@ public class UserServiceImpl implements UserService {
     private ResultMapper resultMapper;
     @Autowired
     private ResultLgMapper resultLgMapper;
+    @Autowired
+    private RoleMapper roleMapper;
     @Override
     public User findUserById(String userId) {
         return userMapper.findUserById(userId);
@@ -29,6 +32,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findUserAndPass(String telephone, String password) {
+        password= MD5Util.getMD5String(password);
         User user = userMapper.findUserAndPass(telephone,password);
         return user;
     }
@@ -121,9 +125,22 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Boolean isTelephone(String telephone) {
-        return  userMapper.isTelephone(telephone)  >= 1 ? true : false;
+    public User isTelephone(String telephone) {
+        return  userMapper.isTelephone(telephone);
     }
+
+    @Override
+    public User login(String username, String s) {
+        User user = userMapper.findUserAndPass(username,s);
+        return user;
+    }
+
+    @Override
+    public List<Role> getRoles(String id) {
+        List<Role> roles = roleMapper.getRoles(id);
+        return roles;
+    }
+
 
 
 }

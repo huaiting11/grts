@@ -24,6 +24,12 @@ spring:
     poolPreparedStatements: true
 mybatis:
   configuration:
-    map-underscore-to-camel-case: true
+    map-underscore-to-camel-case: on
 server:
   port: 80
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: countSql
+

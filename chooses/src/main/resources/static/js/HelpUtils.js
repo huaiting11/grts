@@ -30,8 +30,8 @@ function isEmpty(value){
     return (value == undefined || (typeof value == "string" && value == "") || value == null || (typeof value == "number" && value == 0));
 }
 function topLogin(){
-	var users = sessionStorage.getItem("login_user");
-	var isLogin = users!=null ? true:false;
+    var users = sendAjax({},"/loginStatus","POST","json");
+    var isLogin = users.id !=undefined ? true:false;
 	if(isLogin){
 		$(".alreadyLoggedIn").css("display","block");
 		$(".alreadyLoggedIn").find("img").click(function(ele){
@@ -49,6 +49,9 @@ function topLogin(){
 		$(".notLoggedIn").css("display","block");
 	}
 	$(".alreadyLoggedIn").find("a").eq(1).click(function(){
+        var res = sendAjax("{}","/logout","POST","json");
+        debugger;
+        alert(res);
 		sessionStorage.removeItem("login_user");
 		$(".notLoggedIn").show();
 		$(".alreadyLoggedIn").hide();

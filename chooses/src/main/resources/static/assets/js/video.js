@@ -37,59 +37,46 @@ video.prototype={
 			$(".count").hide();
 		}else {
 			$(".count").show();
-			this.paging();
+			paging
 			$("#p_info").find(".total").text(dataList.total);
 			$("#p_info").find(".pageSize").text(dataList.pageSize);
 		}
 
 	},
 	addRows:function (data) {
-		/*
-		<div class="video">
-			<div class="video_img">
-				<video src="video/44.mp4" controls="controls"></video>
-			</div>
-			<div class="video_explain">
-				<p></p>
-				<div>
-					<button type="submit" class="btn btn-default del" >删除</button>
-					<button type="submit" class="btn btn-default del" >删除</button>
-				</div>
-			</div>
-		</div>*/
 		var videoStr='<div class="video"><div class="video_img"><video src="video/44.mp4" controls="controls"></video></div><div class="video_explain">'+
 		'<p contenteditable="true"></p><div class="btn"><button type="submit" class="btn btn-default del" >删除</button> <button type="submit" class="btn btn-default submit">提交</button></div></div></div>';
 		var $video = $(videoStr);
 		//$video= $('<video class="videoD"  controls="controls"></video>');
-		http://pz19akg48.bkt.clouddn.com/lka22aUKe_P1pc-QV_otf6AGfgla
+		//http://pz19akg48.bkt.clouddn.com/lka22aUKe_P1pc-QV_otf6AGfgla
 		$video.find("video").attr("src","http://pz19akg48.bkt.clouddn.com/"+data.key).attr("id",data.id).attr("key",data.key);
 		$video.find(".video_explain").find("p").eq(0).html(data.description);
 		return $video;
 	},
 	paging:function(){
-	        var that = this;
-	        var activePage = parseInt(that.$page.find(".activePage").text());
-	        var lastPage = that.$page.children().length - 2;
-	        that.$page.children().each(function (dex,ele) {
-	            $(ele).click(function () {
-	                if ($(ele).hasClass("activePage")) return;
-	                if ($(ele).text() == "...") return;
-	                //上一页
-	                if (dex == 0 && activePage > 1){
-	                    that.page(undefined, activePage - 1);
-	                    return;
-	                }
-	                //下一页
-	                if (dex == lastPage + 1 && activePage < lastPage){
-	                    that.page(undefined, activePage + 1);
-	                    return;
-	                }
-	                if ($(ele).text() == "") return;
-	                //其他页
-	                that.page(undefined, parseInt($(ele).text()));
-	            });
-	        });
-	    },
+		var that = this;
+		var activePage = parseInt(that.$page.find(".activePage").text());
+		var lastPage = that.$page.children().length - 2;
+		that.$page.children().each(function (dex,ele) {
+			$(ele).click(function () {
+				if ($(ele).hasClass("activePage")) return;
+				if ($(ele).text() == "...") return;
+				//上一页
+				if (dex == 0 && activePage > 1){
+					that.page(undefined, activePage - 1);
+					return;
+				}
+				//下一页
+				if (dex == lastPage + 1 && activePage < lastPage){
+					that.page(undefined, activePage + 1);
+					return;
+				}
+				if ($(ele).text() == "") return;
+				//其他页
+				that.page(undefined, parseInt($(ele).text()));
+			});
+		});
+	},
 	bindEvent:function(){
 		var that = this;
 		$("#videoData").submit(function(event) {

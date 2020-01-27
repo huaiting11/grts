@@ -1,6 +1,7 @@
 package com.grts.chooses.service;
 
 
+import com.grts.chooses.bean.Role;
 import com.grts.chooses.bean.User;
 
 import java.util.List;
@@ -20,5 +21,9 @@ public interface UserService {
 
     List<User> getUsers(String schoolName);
 
-    Boolean isTelephone(String telephone);
+    User isTelephone(String telephone);
+
+    User login(String username, String s);
+
+    List<Role> getRoles(String id);
 }

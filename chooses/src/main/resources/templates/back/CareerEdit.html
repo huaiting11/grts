@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>AlphaAdmin</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-table.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <style>
+    </style>
+</head>
+<body>
+
+<section class="page-body">
+    <div class="row widget">
+        <div  class="col-lg-12">
+            <div class="box form">
+                <div class="box-header">
+                    <h3 class="box-title">编辑职业类型</h3>
+                </div>
+                <div class="box-body">
+                    <form id="info">
+                        <!--<div class="form-group">
+                            <label >职业方向类型</label>
+                            <select class="form-control">
+                                <option>3</option>
+                                <option selected="selected">4</option>
+                                <option>5</option>
+                            </select>
+                        </div>-->
+                        <div class="form-group">
+                            <label >职业名字</label>
+                           <input  id="name" type="text"  class="form-control"  placeholder="职业名字" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label >职业简介</label>
+                            <textarea rows="10" cols="200" id="des">
+                                    在w3school，你可以找到你所需要的所有的网站建设教程。
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label> 职业分布</label>
+                            <textarea rows="10" cols="200" id="dis">
+                                    在w3school，你可以找到你所需要的所有的网站建设教程。
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label> 职业要求</label>
+                            <textarea rows="10" cols="200" id="req">
+                                    在w3school，你可以找到你所需要的所有的网站建设教程。
+                            </textarea>
+                        </div>
+                        <!--<div class="form-group">
+                            <label for="optionD">选择D</label>
+                            <input type="text" id="optionD" class="form-control" placeholder="选择D" autocomplete="off">
+                        </div>-->
+                        <div class="form-group">
+                            <label >是否是开发岗位</label>
+                            <select class="form-control" id="answer">
+                                <option>是</option>
+                                <option>否</option>
+                            </select>
+                        </div>
+                        <button type="submit" id ="btn" class="btn btn-default">提交</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="/assets/js/careerEdit.js"></script>
+</body>
+</html>

@@ -4,12 +4,11 @@ function topBar(){
 }
 topBar.prototype={
 	init:function(){
-		var users = sessionStorage.getItem("login_user");
-		this.isLogin = users!=null ? true:false;
+		var users = sendAjax({},"/loginStatus","POST","json");
+		this.isLogin = users.id !=undefined ? true:false;
 		if(this.isLogin){
-			var name = JSON.parse(users).name;
-			if(name != undefined){
-				$(".alreadyLoggedIn").find("button").html(name);
+			if(users.name != undefined){
+				$(".alreadyLoggedIn").find("button").html(users.name);
 			}
 		}
 	},
@@ -23,32 +22,18 @@ topBar.prototype={
 		});
 	},
 	goToPage:function(ele,that){
-		var status = sessionStorage.getItem("status");
-		if(that.isLogin){
-			if(ele.text() ==="首页"){
-				window.location = "/home.html";
-			}else if(ele.text() === "能力测试"){
-				window.location = "/exercise.html?status="+status;
-			}else if(ele.text() === "能力成长"){
-				window.location = "/grow.html";
-			}else if(ele.text() === "个人信息"){
-				window.location = "/information.html";
-			}else if(ele.text() === "专业方向匹配"){
-				window.location = "/major.html?status="+status;
-			}else if(ele.text()=== "职业方向匹配"){
-				window.location = "/job.html?status="+status;
-			}
-		}else{
-			if(ele.text() ==="首页"){
-				window.location = "/home.html";
-			}else if(ele.text() === "能力测试"){
-				
-				window.location = "/login.html";
-			}else if(ele.text() === "能力成长"){
-				window.location = "/login.html";
-			}else if(ele.text() === "个人信息"){
-				window.location = "/login.html";
-			}
+		if(ele.text() ==="首页"){
+			window.location = "/home.html";
+		}else if(ele.text() === "能力测试"){
+			window.location = "/exercise.html";
+		}else if(ele.text() === "能力成长"){
+			window.location = "/grow.html";
+		}else if(ele.text() === "个人信息"){
+			window.location = "/information.html";
+		}else if(ele.text() === "专业方向匹配"){
+			window.location = "/major.html?";
+		}else if(ele.text()=== "职业方向匹配"){
+			window.location = "/job.html";
 		}
 	}
 }
