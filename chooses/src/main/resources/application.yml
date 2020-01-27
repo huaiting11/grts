@@ -32,4 +32,8 @@ pagehelper:
   reasonable: true
   support-methods-arguments: true
   params: countSql
+qiniuyun:
+  access_key: usYM3V2dWdsKMwWEo3E4_Hf17-SiRuUztrIwJwcB
+  secret_key: _FWyMtnLxava7ZPDIsPm7aqWNS1m53D-LLV79uoK
+  templateId: 1201690316063645696
 

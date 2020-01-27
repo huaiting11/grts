@@ -9,16 +9,8 @@ job.prototype ={
 	init:function(){
 		$(".menu_ul_li_a").eq(3).css("color","#4DA7FF");
 		topLogin();
-		var cookiesUser = sessionStorage.getItem("login_user");
-		this.userId = JSON.parse(cookiesUser).id;
-		this.userName =  JSON.parse(cookiesUser).name;
-		this.userId = JSON.parse(cookiesUser).id;
-		var status =  sessionStorage.getItem("status");
-		if(status == 0){
-			window.location = "/information.html";
-			return;
-		}
-		var careerData = sendAjax({},"/exercise/career/"+this.userId,"GET","json");
+		//var cookiesUser = sessionStorage.getItem("login_user");
+		var careerData = sendAjax({},"/exercise/career/"+$("#useId").val(),"GET","json");
 		this.userCareer = careerData;
 		this.initCarrer(this.userCareer);
         var res = sendAjax({},"/result/"+this.userId+"/"+this.userCareer[0].id,"GET","json");

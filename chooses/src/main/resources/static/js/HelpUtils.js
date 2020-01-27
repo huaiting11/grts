@@ -48,11 +48,8 @@ function topLogin(){
 	}else{
 		$(".notLoggedIn").css("display","block");
 	}
-	$(".alreadyLoggedIn").find("a").eq(1).click(function(){
+	$(".alreadyLoggedIn").find("a").eq(0).click(function(){
         var res = sendAjax("{}","/logout","POST","json");
-        debugger;
-        alert(res);
-		sessionStorage.removeItem("login_user");
 		$(".notLoggedIn").show();
 		$(".alreadyLoggedIn").hide();
 		window.location = "login.html";

@@ -44,6 +44,7 @@ public class ShiroConfig {
         // 退出系统的过滤器
         filterChainDefinitionMap.put("/logout", "logout");
         filterChainDefinitionMap.put("/login", "anon");
+        filterChainDefinitionMap.put("/user/sendVerifyCode", "anon");
         filterChainDefinitionMap.put("/register.html", "anon");
         filterChainDefinitionMap.put("/loginStatus", "anon");
         filterChainDefinitionMap.put("/home.html", "anon");

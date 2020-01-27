@@ -5,7 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-<header class="navbar-header" th:fragment="topBar">
+
+<header th:fragment="topBar" class="head">
+    <input type="hidden" id="useId">
     <div class="top">
         <div class="top_left">
             <img src="/img/home.png" alt="logo">
@@ -40,12 +42,62 @@
             <div class="alreadyLoggedIn point">
                 <button>李文龙</button>
                 <img src="/img/down_blue.png"  />
-                <div>
+               <!-- <div>
                     <a href="##">修改密码</a>
                     <a href="JavaScript:void(0)">退出</a>
+                </div>-->
+                <div class="picBox">
+                    <span  class="updatePwd">修改密码</span>
+                    <span> <a href="JavaScript:void(0)">退出 </a></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--<div class="modal fade addModal in" id="modifyPwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" style="overflow: hidden;">
+        <div class="modal-dialog">
+            <div class="modifyPwdModal commodal-content ui-draggable" style="margin-top: 30px; position: relative;">
+                <div class="modal-header clearfix commonHeader ui-draggable-handle">
+                    <span></span>
+                    <span>修改密码</span>
+                    <span data-dismiss="modal"></span>
+                </div>
+                <div class="modal-body">
+                    <p class="clearfix"><span>密　　码:</span><input type="password" maxlength="16" id="pwd" placeholder="请输入新密码" autocomplete="off"></p>
+                    <p class="clearfix"><span>密码确认:</span><input maxlength="16" type="password" id="confirmPwd" placeholder="请再次输入新密码" autocomplete="off"></p>
+                    <p class="clearfix" id="remindInfo" style="color: red;display: none;font-size: 12px;"></p>
+                </div>
+                <div class="modal-footer commonFooter">
+                    <button id="updatePwd">修改密码</button>
                 </div>
             </div>
         </div>
+    </div>-->
+    <div class="modal fade " id="modifyPwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modifyPwdModal modal-content" style="margin-top: 30px; position: relative;">
+                <div class="modal-header  commonHeader clearfix">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        修改密码
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p class="clearfix"><span>密　　码:</span><input type="password" maxlength="16" id="pwd" placeholder="请输入新密码" autocomplete="off"></p>
+                    <p class="clearfix"><span>密码确认:</span><input maxlength="16" type="password" id="confirmPwd" placeholder="请再次输入新密码" autocomplete="off"></p>
+                    <p class="clearfix" id="remindInfo" style="color: red;display: none;font-size: 12px;"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        修改密码
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
     </div>
 </header>
 </body>

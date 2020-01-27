@@ -6,9 +6,7 @@ exercise.prototype ={
 		$(".menu_ul_li_a").eq(2).css("color","#4DA7FF");
 		topLogin();
 		this.cout();
-		var cookiesUser = sessionStorage.getItem("login_user");
-		this.userId = JSON.parse(cookiesUser).id;
-		var careerData = sendAjax({},"/exercise/career/"+this.userId,"GET","json");
+		var careerData = sendAjax({},"/exercise/career/"+$("#useId").val(),"GET","json");
 		this.userCareer = careerData;
 		this.initCarrer(this.userCareer);
 		var exercise = sendAjax({},"/exercise/"+this.userCareer[0].id,"GET","json");

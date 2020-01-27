@@ -46,6 +46,7 @@
 }
 .menu_ul_li_a{
 	text-decoration: none;
+	color: #222222;
 }
 .user_div{
 	width: 208px;
@@ -72,22 +73,14 @@
 	height: 20px;
 	margin: 2.7em auto ;
 	display: none;
+	position: absolute;
+
 } 	
 .alreadyLoggedIn button{
 	letter-spacing: 0.2em;
 	background-color: white;
 }
-.alreadyLoggedIn div{
-	width: 70px;
-	height: 60px;
-	text-align: center;
-	overflow: hidden;
-	border-radius: 5px;
-	background-color: #FBFDFE;
-	border: 1px solid lightgray;
-	position: absolute;
-	display: none;
-}
+
 
 .alreadyLoggedIn div a{
 	display: block;
@@ -107,4 +100,69 @@
 }
 .point{
 	cursor:pointer;
+}
+.commonHeader{
+	background: linear-gradient(to bottom,#fff,#dddcdc);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#dddcdc',GradientType=0);
+	height: 40px;
+	line-height: 40px;
+	padding: 0 16px 0 20px;
+	border-radius: 6px;
+	border-bottom: 0;
+}
+#modifyPwd .modifyPwdModal {
+	width: 480px;
+	height: 345px;
+	margin: 100px auto;
+	background-color: #fff;
+	border-radius: 6px;
+}
+#modifyPwd .modifyPwdModal .modal-body p {
+	margin-bottom: 40px;
+}
+#modifyPwd .modifyPwdModal .modal-body p span {
+	padding-top: 6px;
+}
+#modifyPwd .modifyPwdModal .modal-body p span, #modifyPwd .modifyPwdModal .modal-body p input {
+	display: inline-block;
+	float: left;
+}
+#modifyPwd .modifyPwdModal .modal-body {
+	padding: 60px 74px;
+	height: 237px;
+}
+.modal-body {
+	position: relative;
+	padding: 15px;
+}
+#modifyPwd .modifyPwdModal .modal-body p input {
+	margin-left: 20px;
+	border: 1px solid #d5d5d5;
+	border-radius: 6px;
+	text-indent: 20px;
+	height: 30px;
+	line-height: 28px;
+	width: 232px;
+	outline: 0;
+}
+#myModalLabel ,.close{
+	height: 40px;
+	line-height: 40px;
+}
+.picBox{
+	position: absolute;
+	right: 80px;
+	width: 200px;
+	text-align: center;
+	border-radius: 6px;
+	background-color: #fff;
+	box-shadow: 0 5px 8px rgba(10,34,89,0.3);
+	top: 24px;
+	padding: 30px 0 18px 0;
+
+}
+.picBox span {
+	width: 100%;
+	display: inline-block;
+	padding-bottom: 12px;
 }

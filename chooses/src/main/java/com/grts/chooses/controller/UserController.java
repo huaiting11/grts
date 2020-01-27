@@ -11,6 +11,7 @@ import com.qiniu.sms.SmsManager;
 import com.qiniu.util.Auth;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +30,8 @@ public class UserController {
     private UserService userService;
     @Autowired
     private ExercisesService exercisesService;
+    @Autowired
+    private Environment env;
     @RequestMapping("/user/{userId}")
     @ResponseBody
     public User findUserById(@PathVariable String userId){
@@ -73,15 +76,15 @@ public class UserController {
     @RequestMapping("/user/sendVerifyCode")
     @ResponseBody
     public Boolean sendVerifyCode(String telephone, HttpServletRequest request) {
-        String ACCESS_KEY = "usYM3V2dWdsKMwWEo3E4_Hf17-SiRuUztrIwJwcB";
-        String SECRET_KEY = "_FWyMtnLxava7ZPDIsPm7aqWNS1m53D-LLV79uoK";
+        String ACCESS_KEY = env.getProperty("qiniuyun.access_key");
+        String SECRET_KEY = env.getProperty("qiniuyun.secret_key");
         Auth auth = Auth.create(ACCESS_KEY, SECRET_KEY);
         SmsManager smsManager = new SmsManager(auth);
         String verifyCode = String.valueOf(new Random().nextInt(899999) + 100000);
         try {
             Map<String, String> map = new HashMap<String, String>();
             map.put("code",verifyCode);
-            smsManager.sendMessage("1201690316063645696", new String[] { telephone }, map);
+            smsManager.sendMessage(env.getProperty("qiniuyun.templateId"), new String[] { telephone }, map);
             JSONObject json = new JSONObject();
             json.put("verifyCode", verifyCode);
             json.put("createTime", System.currentTimeMillis());

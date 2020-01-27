@@ -5,9 +5,8 @@ information.prototype = {
 	init:function(){
 		$(".menu_ul_li_a").eq(5).css("color","#4DA7FF");
 		topLogin();
-		var cookiesUser = sessionStorage.getItem("login_user");
-		this.userId = JSON.parse(cookiesUser).id;
-		var res = sendAjax({},"user/"+this.userId,"GET","json");
+		//this.userId = sendAjax({},"","POST","json").id;
+		var res = sendAjax({},"user/"+$("#useId").val(),"GET","json");
 		this.user = res;
 		console.log(this.user);
 		// 只能看，不能填写

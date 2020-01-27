@@ -1,4 +1,5 @@
 $(function(){
+	var that = this;
 	function loadRight(url, callback, content){
 	    if(isEmpty(content)){
 	        content = ".page-wrapper";
@@ -73,4 +74,18 @@ $(function(){
 			}
 		}
 	});
+	$("#logout").click(function () {
+		sendAjax({},"/logout","POST","json");
+		window.location = "/home.html";
+
+	});
+	function initData() {
+		var user = sendAjax({},"/loginStatus","POST","json");
+		that.userId = user.id;
+		$("#user").text(user.name);
+	};
+	$("#modify").click(function () {
+		alert(that.userId);
+	})
+	initData();
 })

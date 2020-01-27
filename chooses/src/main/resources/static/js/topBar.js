@@ -10,6 +10,7 @@ topBar.prototype={
 			if(users.name != undefined){
 				$(".alreadyLoggedIn").find("button").html(users.name);
 			}
+			$("#useId").val(users.id);
 		}
 	},
 	bindEvent:function(){
@@ -17,8 +18,8 @@ topBar.prototype={
 		$(".menu_ul").find(".menu_ul_li_a").click(function(){
 			that.goToPage($(this),that);
 		})
-		$(".alreadyLoggedIn").find("a").eq(0).click(function(){
-			alert("修改密码");
+		$(".picBox").find("span").eq(0).click(function(){
+			$('#modifyPwd').modal('show')
 		});
 	},
 	goToPage:function(ele,that){

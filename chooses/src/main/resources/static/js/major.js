@@ -5,14 +5,7 @@ major.prototype={
 	init:function(){
 		$(".menu_ul_li_a").eq(1).css("color","#4DA7FF");
 		topLogin();
-		var cookiesUser = sessionStorage.getItem("login_user");
-		this.userId = JSON.parse(cookiesUser).id;
-		var status =  sessionStorage.getItem("status");
-		if(status == 0){
-			window.location = "/information.html";
-			return;
-		}
-		var careerData = sendAjax({},"/exercise/career/"+this.userId,"GET","json");
+		var careerData = sendAjax({},"/exercise/career/"+$("#useId").val(),"GET","json");
 		this.userCareer = careerData;
 		this.initCarrer(this.userCareer);
 		this.bindEvent();
