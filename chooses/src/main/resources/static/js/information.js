@@ -5,7 +5,7 @@ information.prototype = {
 	init:function(){
 		$(".menu_ul_li_a").eq(5).css("color","#4DA7FF");
 		topLogin();
-		//this.userId = sendAjax({},"","POST","json").id;
+		this.userId = $("#useId").val();
 		var res = sendAjax({},"user/"+$("#useId").val(),"GET","json");
 		this.user = res;
 		console.log(this.user);

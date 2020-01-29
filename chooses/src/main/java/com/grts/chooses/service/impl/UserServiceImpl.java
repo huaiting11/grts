@@ -97,12 +97,13 @@ public class UserServiceImpl implements UserService {
         }
     }
     @Override
-    public boolean register(String telephone, String password) {
+    public boolean register(String telephone, String password, String nickName) {
         User user = new User();
         user.setId(UUID.randomUUID().toString().replaceAll("-", ""));
         user.setTelephone(telephone);
-        user.setPassword(password);
+        user.setPassword(MD5Util.getMD5String(password));
         user.setStatus(0);
+        user.setNickName(nickName);
         int i = userMapper.saveUser(user);
         if(i > 0){
             return  true;

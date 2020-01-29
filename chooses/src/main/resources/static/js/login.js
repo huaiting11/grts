@@ -10,7 +10,7 @@ login.prototype={
 		topLogin();
 	},
 	bindEvent:function(){
-		$("#logbtn").click(function(){
+		$("#loginBtn").click(function(){
 			var telephone = $("#telephone").val();
 			var password = $("#password").val();
 			var data={};
@@ -21,16 +21,16 @@ login.prototype={
 
 				 window.location = "/home.html";
 			}else{
-				$(".msg").show();
+				$("#firstDiv").children().eq(1).find(".prompt").show();
 			}
 			
 		});
 		$("#telephone").focus(function(){
-			$(".msg").hide();
+			$("#firstDiv").children().eq(1).find(".prompt").hide();
 			
 		});
 		$("#password").focus(function(){
-			$(".msg").hide();
+			$("#firstDiv").children().eq(1).find(".prompt").hide();
 		})
 	}
 }

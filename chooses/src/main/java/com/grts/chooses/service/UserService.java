@@ -15,7 +15,7 @@ public interface UserService {
 
     String saveScore(float score, String carrId, String userId);
 
-    boolean register(String telephone, String password);
+    boolean register(String telephone, String password, String nickName);
 
     List<String> getSchool();
 

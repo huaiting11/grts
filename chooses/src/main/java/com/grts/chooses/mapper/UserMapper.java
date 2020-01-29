@@ -20,9 +20,9 @@ public interface UserMapper {
             "school = #{school} " +
             "WHERE id = #{id}")
     int updateUser(User user);
-    @Insert("INSERT INTO t_user(id, name, telephone, sex, password, " +
+    @Insert("INSERT INTO t_user(id, nickName,name, telephone, sex, password, " +
             "professional, hobby, evaluation, `status`, prov, city, dist, age, school) " +
-            "VALUE (#{id},#{name},#{telephone},#{sex},#{password},#{professional}," +
+            "VALUE (#{id},#{nickName},#{name},#{telephone},#{sex},#{password},#{professional}," +
             "#{hobby},#{evaluation},#{status},#{prov},#{city},#{dist},#{age},#{school})")
     int saveUser(User user);
     @Select("SELECT DISTINCT school FROM t_user")

@@ -5,6 +5,7 @@ major.prototype={
 	init:function(){
 		$(".menu_ul_li_a").eq(1).css("color","#4DA7FF");
 		topLogin();
+		this.userId = $("#useId").val();
 		var careerData = sendAjax({},"/exercise/career/"+$("#useId").val(),"GET","json");
 		this.userCareer = careerData;
 		this.initCarrer(this.userCareer);

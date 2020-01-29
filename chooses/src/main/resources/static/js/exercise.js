@@ -6,6 +6,7 @@ exercise.prototype ={
 		$(".menu_ul_li_a").eq(2).css("color","#4DA7FF");
 		topLogin();
 		this.cout();
+		this.userId = $("#useId").val();
 		var careerData = sendAjax({},"/exercise/career/"+$("#useId").val(),"GET","json");
 		this.userCareer = careerData;
 		this.initCarrer(this.userCareer);

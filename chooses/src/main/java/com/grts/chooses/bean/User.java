@@ -7,6 +7,8 @@ public class User implements Serializable {
     private static final long serialVersionUID = 1L;
     private String id;
 
+    private String  nickName;
+
     private String name;
 
     private String telephone;
@@ -40,6 +42,14 @@ public class User implements Serializable {
 
     public void setId(String id) {
         this.id = id == null ? null : id.trim();
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getName() {

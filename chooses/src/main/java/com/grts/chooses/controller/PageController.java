@@ -1,16 +1,23 @@
 package com.grts.chooses.controller;
 
 import com.grts.chooses.bean.User;
+import com.grts.chooses.service.UserService;
 import com.grts.chooses.util.ShiroUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class PageController {
+    @Autowired
+    UserService userService;
     @RequestMapping("/{page}")
     public String showPage(@PathVariable String page, Integer status){
         User user = ShiroUtils.getPrincipal();
+        if(user!= null){
+            user = userService.findUserById(user.getId());
+        }
         if(page.equals("home.html")){
             if(user != null){
                if(ShiroUtils.getSubject().hasRole("管理员")){

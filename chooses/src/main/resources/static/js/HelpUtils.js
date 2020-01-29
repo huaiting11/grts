@@ -34,17 +34,12 @@ function topLogin(){
     var isLogin = users.id !=undefined ? true:false;
 	if(isLogin){
 		$(".alreadyLoggedIn").css("display","block");
-		$(".alreadyLoggedIn").find("img").click(function(ele){
-			
-			//$(".alreadyLoggedIn div").css("display","block");
-			if($(".alreadyLoggedIn div").css('display') === 'none'){
-				$(".alreadyLoggedIn").find("img").attr("src","../img/up_blue.png");
-				$(".alreadyLoggedIn div").show();
-			}else{
-			  $(".alreadyLoggedIn").find("img").attr("src","../img/down_blue.png");
-			   $(".alreadyLoggedIn div").hide();
-			}
+		$(".user_div").mouseover(function(ele){
+            $(".alreadyLoggedIn div").show();
 		})
+        $(".user_div").mouseout (function(ele){
+            $(".alreadyLoggedIn div").hide();
+        })
 	}else{
 		$(".notLoggedIn").css("display","block");
 	}

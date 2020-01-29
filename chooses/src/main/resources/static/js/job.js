@@ -9,7 +9,8 @@ job.prototype ={
 	init:function(){
 		$(".menu_ul_li_a").eq(3).css("color","#4DA7FF");
 		topLogin();
-		//var cookiesUser = sessionStorage.getItem("login_user");
+		this.userId = $("#useId").val();
+		this.userName = $("#userName").val();
 		var careerData = sendAjax({},"/exercise/career/"+$("#useId").val(),"GET","json");
 		this.userCareer = careerData;
 		this.initCarrer(this.userCareer);

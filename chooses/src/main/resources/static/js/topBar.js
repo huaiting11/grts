@@ -7,10 +7,11 @@ topBar.prototype={
 		var users = sendAjax({},"/loginStatus","POST","json");
 		this.isLogin = users.id !=undefined ? true:false;
 		if(this.isLogin){
-			if(users.name != undefined){
-				$(".alreadyLoggedIn").find("button").html(users.name);
+			if(users.nickName != undefined){
+				$(".alreadyLoggedIn").find("button").html(users.nickName);
 			}
 			$("#useId").val(users.id);
+			$("#userName").val(users.name);
 		}
 	},
 	bindEvent:function(){
